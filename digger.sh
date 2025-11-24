@@ -14,7 +14,7 @@ DigLines=$(cat $Domains)
 
 for Line in $DigLines
 do
-	echo "# Dig report for $Line"
+	echo "# Dig report for $Line" >> $Output
 	for Type in $RecordTypes
 	do
 		mkdir -p "$Outpath/$Line"
