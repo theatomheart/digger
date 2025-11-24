@@ -1,14 +1,10 @@
 #!/bin/sh
 
-# Runs dig on a list of domain names.
-# Requires dig; use 'pacman -S bind'
-# if you need to install dig.
+Domains="$HOME/domains.txt"	# This is your file with a list of domain names.
 
-# This file is the list of domain names.
-Domains="$HOME/domains.txt"
+if [ ! -f $Domains ] ; then echo "The file $Domains is missing." && exit 1 ; fi
 
-# This is the path the output will be saved to.
-Outpath="$HOME/.digger"
+Outpath="$HOME/.digger"		# This is the path the output will be saved to.
 
 # Run dig against these types of records.
 RecordTypes="any
