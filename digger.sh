@@ -1,6 +1,8 @@
 #!/bin/sh
 
-# Runs dig on a list of domain names
+# Runs dig on a list of domain names.
+# Requires dig; use 'pacman -S bind'
+# if you need to install dig.
 
 # This file is the list of domain names.
 Domains="$HOME/domains.txt"
