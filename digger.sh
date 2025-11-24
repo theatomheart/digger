@@ -30,7 +30,7 @@ do
 		mkdir -p "$Outpath/$Line"
 		cd "$Outpath/$Line"
 		echo "=== Record type: $Type ===" >> $Output
-		dig $Type $Line >> "$Output"
+		dig $Type $Line +noall +answer >> "$Output"
 		echo "--- End of record type: $Type ===" >> $Output
 	done
 done
